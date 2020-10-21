@@ -1,11 +1,15 @@
 #include <string>
 #include "Empregado.hpp"
+#include <iostream>
 
 class Engenheiro : public Empregado {
 
   public:
-    std::string nome;  
-	int projetos;
-	
+  	int projetos;
+  
+    void saidaEngenheiro (double horasTrabalhadas){
+      this->saidaEmpregado(horasTrabalhadas);
+      std::cout << "Projetos: " << this->projetos << std::endl;
+      std::cout << std::endl;
+    }
 };
-
